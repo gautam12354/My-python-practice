@@ -1,3 +1,12 @@
+'''
+REPL is the language shell, the Python Interactive Shell.The REPL acronym is short for Read, Eval, Print and Loop.
+Read: take user input.
+Eval: evaluate the input.
+Print: shows the output to the user.
+Loop: repeat.
+'''
+
+
 
 #clear Screen in Command window
 >>>import os
@@ -36,6 +45,14 @@ SyntaxError: invalid syntax
 >>>"hi how are you" + " Gautam"               
  'hi how are you Gautam'
 
+# asignment operator
+>>> x=1
+>>> print(x)
+1
+>>>x= x+1             # assignment with expression
+2
+
+
 #interactive operator"_"
 >>>_                          #it is reference to the output of the last executed expresssion
 9
@@ -53,6 +70,10 @@ SyntaxError: invalid syntax
 2.25
 >>>9/4.0
 2.25
+
+# for integer Divion output use double slash // 
+>>> 25//6
+4
 
 # super long interter also possible
 >>>2**100
@@ -289,6 +310,8 @@ True
 
 
 
+# End the interactive session
+>>>exit()
 
 
 

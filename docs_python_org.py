@@ -115,6 +115,22 @@ True
 >>> print('Hi', 'hello world', 'bye bye')
 Hi hello world bye bye
 
+#print more than one line at same time
+>>>print('''Twinkle, twinkle, little star
+How I wonder what you are
+Up above the world so high
+Like a diamond in the sky
+Twinkle, twinkle little star
+How I wonder what you are''')
+
+Twinkle, twinkle, little star
+How I wonder what you are
+Up above the world so high
+Like a diamond in the sky
+Twinkle, twinkle little star
+How I wonder what you are
+
+
 #New line with print function
 >>>s = 'First line.\nSecond line.'                      # \n means newline
 >>>s                                                    # without print(), \n is included in the output
@@ -273,7 +289,7 @@ print("Logging In....")
 >>> c
 'n'
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Type Convertion !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Type Casting / Conversion  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #Type conversion functions
 #To int
@@ -282,15 +298,18 @@ print("Logging In....")
 >>> int(-2.3)
 -2
 
-#float converts integers
+#integers to float
 >>> float(32)
 32.0
+
+# 
 >>> float('3.14159')
 3.14159
 
-#str converts its argument to a string
+#str converts integer to string
 >>> str(32)
 '32'
+#str converts float to string
 >>> str(3.14159)
 '3.14159'
 
@@ -298,6 +317,17 @@ print("Logging In....")
 >>>total =int(quantity_s)+2 
 >>>total
 5
+
+# Boolean too integer
+>>>int(True)
+1
+>>>int(False)
+0
+
+# convert integer to boolean
+>>> bool(1)
+True
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DATES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

@@ -469,3 +469,11 @@ for i in list1:
 
 40 80 120 50 100 150 60 120 180 #result of the above block
 
+# add 2 to each element in the list x(operation between two list in single line)
+x = [2, 3, 4, 5, 6]  
+y = [a + 2 for a in x] 
+print(y)
+
+[4, 5, 6, 7, 8] # result of ablove code
+
+

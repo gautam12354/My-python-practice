@@ -1,11 +1,10 @@
-# Variable are storage location that have a name.
+# Variable are named place in memory that store data and later retrive data using variable "name".
 # your can asign a value to a variable and recall them by the variable name
 # Case sensative --> Fruit and fruit are both different variable
-# Must start with letter 
+# Must start with letter.
 # underscore allowed in variable
-
 # No Limit for maximum value for an integer in Python3.
-
+# you can change the content of a variable in later statement.
 
 #declare variable
 >>> x =5     #type integer
@@ -106,5 +105,19 @@ a = (1 + 2 + 3 +
 print(a)
 45
 #_________________________________________________#
+# you can put any size variable name with any cobination	
+
+xlq3z9ocd = 35.0
+xlq3z9acd = 12.0
+xlqpz9acd = xlq3z9acd*xlq3z9ocd
+print(xlqpz9acd)
+
+# Variable value assignment
+a=5
+b=7
+c=b=a
+print(b)
+
+--> 5
 
 

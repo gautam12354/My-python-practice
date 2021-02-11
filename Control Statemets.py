@@ -141,6 +141,25 @@ Gautam rock rock rock rock
 Gautam rock rock rock rock
 Gautam rock rock rock rock
 
+
+# Solving Formula 
+
+while True:
+	x= int(input("Enter an number: "))
+	z= x*x+2*x+3
+	print(z)
+
+Enter an number: 10
+123
+Enter an number: 100
+10203
+Enter an number: 67
+4626
+Enter an number: 88
+7923
+Enter an number:
+
+
 #_________________________________________________________________________________________________________________________________#
 											For LooP
 # it works with Sequence like--> list tuple, set array, range function, string

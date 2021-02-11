@@ -1,3 +1,7 @@
+# String A sequence of charactor
+# String can be writtn within double quates as well as single quate also
+
+
 #https://www.programiz.com/python-programming/methods/string
 #https://www.programiz.com/python-programming/string
 
@@ -14,6 +18,14 @@
 >>> single = 'she said, "That\'s a great tasting apple!"'
 >>> single
 'she said, "That\'s a great tasting apple!"'
+
+# A string can be spaces or digit
+>>>"1 2 3 4 5"
+'1 2 3 4 5'
+
+# A string can also be special Charactor
+>>> '@#2 #]&* ^%$'
+'@#2 #]&* ^%$'
 
 
 #Strings - indexing 
@@ -36,6 +48,10 @@ print(var.upper()) # upper() method is called,
 >>>print('I' + 'Love' + 'Python.')
 --> ILovePython.
 
+# Concatinate integer as string
+>>> '1'+'2'
+'12'
+
 # Strings - repetition / multiplying a string
 >>>print('-' *10)
 ----------
@@ -48,8 +64,13 @@ I love Python3.8
 
 #Strings - finding a character 
 >>>a = "Cisco Switch"
->>>a.find("sco")               #--> it display the finding chactor position 
+>>>a.find("sco")               #--> it display the finding charactor position 
 2
+
+# If the sub-string is not in the string, the output is negative one.
+>>>a = "Cisco Switch"
+>>>a.find("gautam")
+-1 
 
 #count() lets you know how many times a certain character appears in the string.
 >>>a = "Cisco Switch" 
@@ -233,13 +254,24 @@ thwas was string example....wow!!! thwas is really string
 >>>string1[:-5]
 'O E2 10.110.8.9 [160/5] via 10.119.254.6, 0:01:00, Ethe'  
 
-#adds a third element called step; skips every second character of the string
+# skips every second character of the string
 >>>string1[::2]
 'OE 01089[6/]va1.1.5.,00:0 tent'  
 
 #returns string1's elements in reverse order
 >>>string1[::-1]
 '2tenrehtE ,00:10:0 ,6.452.911.01 aiv ]5/061[ 9.8.011.01 2E O' 
+
+
+>>> Name = "Michael Jackson"
+
+# take every Second Value
+>>> Name[::2]
+'McalJcsn'
+
+# Take every second Value upto 4
+>>> Name[0:5:2]
+'Mca'
 
 
 # Updating Strings --> You can "update" an existing string by (re)assigning a variable to another string.
@@ -291,5 +323,29 @@ otherStr = replaceMultiple(mainStr, ['s', 'l', 'a'] , "AA")
 print(otherStr)  
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Escape Sequence
+
+# skip ' in a string 
+>>>txt = 'It\'s alright.'
+>>>print(txt)
+It's alright.                                                                                                                                   
+
+# Use single \ in output
+>>>txt = "This will insert one \\ (backslash)."
+>>>print(txt) 
+This will insert one \ (backslash).
+
+# rinting " " in output
+>>>txt = "We are the so-called \"Vikings\" from the north."
+>>>print(txt) 
+We are the so-called "Vikings" from the north.
 
 
+# Print in next Line
+>>> print("Michal Jackson \n is the best")
+Michal Jackson
+ is the best
+
+# Taking tab
+>>> print("Michal Jackson \t is the best")
+Michal Jackson   is the best 
