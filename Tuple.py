@@ -8,6 +8,7 @@ You cannot remove elements from a tuple.
 Tuples have no remove or pop method.
 Count and index are the methods available in a tuple.
 '''
+# Tuples are immutable
 
 # ********************    Tuples - the same indexing & slicing rules apply as for lists     *********************************
 
@@ -16,6 +17,11 @@ Count and index are the methods available in a tuple.
 >>>my_tuple = ()
 >>> my_tuple
 ()
+
+# touple can store int float string but data type will only touple
+>>> g = (1,'gautam',6.789)
+>>> type(g)
+<class 'tuple'>
 
 # New Tuple
 >>>tupl = ('Tuple', 'is', 'an', 'IMMUTABLE', 'list')
@@ -89,10 +95,16 @@ True
 # Deleting a tuple
 >>>del tuple1
 
+# sorting a tuple
+>>> g= (1,56,7,89,9,34,25,76,7,1,23)
+>>> sorted(g)
+[1, 1, 7, 7, 9, 23, 25, 34, 56, 76, 89]
 
 
-
-
+# Tuple Nesting
+>>>NT = (1,2,("pop","rock"),(3,4),("disco"),(1,2))  
+>>> NT[2][1]
+'rock'
 
 
 

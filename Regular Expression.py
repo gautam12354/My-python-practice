@@ -1,21 +1,28 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Reglar Expression !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#Reglar Expression is a special sequence of charactor that helps you match or find other strings or set of strings using a specialized syntex held in pattern.
-# ^ --> Matches begining of Line
-# $ --> Matches end of line
-#. --> Maches any single charactor except newline(using m allow it to match newline as well)
-#[...] --> Matches any single charactor in brackets.
-#[^...] --> Matches any single charactor not in brackets.
-#re* --> Matches 0 or more occurences of preceding expression.
-#re+ --> Matches 1 or more occurence of preceding expression.
-#re? --> Matches o or 1 occurence of preceding expression.
-#re{n} --> Matches exactly n number of occurence of preceding expression.
-#re{n,} --> Matches n or more occurence of preceding expression.
-#re{n,m} -->Matches atleast n and at most m occurence of preceding expression.
-#a|b --> Matches either a or b.
-#(re) --> Group regular expression and remember matches text
+#Reglar Expression --> is a special sequence of charactor that helps you match or find other strings or set of strings using a 
+#                      specialized syntex held in pattern.
+
+'''
+
+ ^ --> Matches begining of Line
+ $ --> Matches end of line
+ . --> Maches any single charactor except newline(using m allow it to match newline as well)
+ \s --> Matches Whitespaces
+ \S --> Maches any non-whitespace charactor
+ [...] --> Matches any single charactor in brackets.
+ [^...] --> Matches any single charactor not in brackets.
+ re* --> Matches 0 or more occurences of preceding expression.
+ re+ --> Matches 1 or more occurence of preceding expression.
+ re? --> Matches o or 1 occurence of preceding expression.
+ re{n} --> Matches exactly n number of occurence of preceding expression.
+ re{n,} --> Matches n or more occurence of preceding expression.
+ re{n,m} -->Matches atleast n and at most m occurence of preceding expression.
+ a|b --> Matches either a or b.
+ (re) --> Group regular expression and remember matches text
 
 
 #Functions of Regular expression:
+
 --Match  --> try to apply the pattern at the start of the string, returning a match object, or none if no match was found.
 --Search --> Scan through string looking for a match to the pattern, returning a match object, or none if no match was found.
 --Sub --> substitute
@@ -25,6 +32,8 @@
 --purge
 --split  --> split the sourse string by the occurence of the pattern, returning a list containing the resulting substring.
 
+'''
+
 >>>import re                             #regular string module
 >>>m = re.match("^123","123456789")      # check 123 is present at starting of the string or not (pattern, string, flag)(match check only begning of the string)
 >>>print(m.group(0))                     # check for group 0
@@ -32,20 +41,21 @@
 
 #Check charactors in ending of the string
 >>>m= re.search("890$","1234567890")       #serach function search in all bengning,middle,end but match only check at begning.
->>>print(m.group(0))  
+>>>print(m.group(0)) 
+890 
 
 #findall function(Split string on base of pattern)
 >>> m = re.findall("890","12345678901234567890123456789012345678901234567890123456789012345678901234567890")
 >>>print(m)                                                                                                   #return match string in a list
-['890', '890', '890', '890', '890', '890', '890', '890']    
+--> ['890', '890', '890', '890', '890', '890', '890', '890']    
 
-#sun function
->>>m = re.sub("12","34","121212121212121212",2)            #replace(substitute) 12 by 34(old,new, string)[last n = 2 means only two time substitue]
+#sub function
+>>>m = re.sub("12","34","121212121212121212",2)    #replace(substitute) 12 by 34(old,new, string)[last n = 2 means only two time substitue]
 >>>print(m)
 343434343434343434
 
 #split function
->>>m = re.split(",","1,2,3,4,5,6,7,8,9")              #split on the basis of pattern here on base of comma
+>>>m = re.split(",","1,2,3,4,5,6,7,8,9")    #split on the basis of pattern here on base of comma
 >>>print(m)                       
 ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
@@ -60,9 +70,9 @@
 # \w   --> it is used for all a-z,A-z,0-9 All Alphanumeric Values and underscore
 # (Dot.) --> In the default mode, this mathes any character expect new line 
 >>>import re
->>>m= re.search(r"[\w]+@[\w]+[.][\w]+","test@gmail.comm")
+>>>m= re.search(r"[\w]+@[\w]+[.][\w]+","test@gmail.com")
 >>>print(m.group(0))
-test@dmail.com                                                   #print email only if syntext is right otherwise return none
+test@dmail.com                  #print email only if syntext is right otherwise return none
 
 #________________________________________________#
 #Program for ip filtering and replace it with new one

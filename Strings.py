@@ -1,9 +1,12 @@
-# String A sequence of charactor
-# String can be writtn within double quates as well as single quate also
+# String A sequence of charactor ...it is data type in python
+# String can be writtn within double quates as well as single quate also.
 
 
 #https://www.programiz.com/python-programming/methods/string
 #https://www.programiz.com/python-programming/string
+
+# Empty String
+>>>a= ""
 
 # Using Quotes within Strings
 >>> sentence = 'she said, "that is a great tasting apple!"'
@@ -32,6 +35,8 @@
 >>>a = "Cisco Switch" 
 >>>a.index("i")
 1
+>>>print(a['o'])
+4
 
 #String upper method
 var = "Hello, John"

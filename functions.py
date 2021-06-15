@@ -16,13 +16,14 @@
 # function object: A value created by a function definition. The name of the function is a variable that refers to a function object.
 # header: The first line of a function definition.
 # body: The sequence of statements inside a function definition.
-# parameter: A name used inside a function to refer to the value passed as an argument. function call: A statement that runs a function. 
-#           It consists of the function name followed by an argument list in parentheses.
+# Function parameter: A parameter is a variable which we use in function defination, that allow function to access the argumments for a particular function invocation. 
+# function call: A statement that runs a function. It consists of the function name followed by an argument list in parentheses.
 # argument: A value provided to a function when the function is called. This value is assigned to the corresponding parameter in the function.
 # local variable: A variable defined inside a function. A local variable can only be used inside its function.
 # return value: The result of a function. If a function call is used as an expression, the return value is the value of the expression.
 # fruitful function: A function that returns a value.
-# void function: A function that always returns None. A special value returned by void functions
+# void function: A function that always returns None. 
+# None : A special value returned by functions when we define nothing in return in function
 
 
 #Why functions?
@@ -42,15 +43,78 @@
 >>>x = math.cos(radians)
 >>>golden = (math.sqrt(5) + 1) / 2
 
-# void functions --> Other functions, like print_twice, perform an action but don’t return a value.
+#_____________________________________________________#
 
-def print_twice(bruce):
-    print(bruce)
-    print(bruce)
+#function creation
+def print_lyrics():                                     #function definition
+    print("I'm a lumberjack, and I'm okay.")
+    print('I sleep all night and I work all day.')
 
->>> print_twice('Spam')
-Spam
-Spams
+#function call
+print_lyrics()    #1st time
+print_lyrics()    #2nd time
+
+print(print_lyrics)       #The value of print_lyrics is a function object, which has type “function”
+
+
+#--------------------------------------------#
+# None keyword in function 
+
+# Let's define the function “No work” that performs no task.which doesn’t do anything, but satisfies the requirement of a non-empty body.
+def NoWork():
+	pass               # Python doesn’t allow a function to have an empty body, so we can use the keyword pass,
+print(NoWork())    # return None
+
+def greeting(name):
+	print("Welcome : ", name)
+
+result = greeting("Gautam")   # it will print Welcome : Gautam
+
+print(result)              # it will print None because function return nothing
+
+#_________________________________________________#
+# Fuction Parameter
+def greet(lang):
+    if lang == 'es':
+        print('Hola')
+    elif lang == 'fr':
+        print('Bonjour')
+    else:
+        print('Hello')        
+
+>>>greet('en')
+Hello
+>>>greet('es')
+Hola
+>>>greet('fr')
+Bonjour
+
+
+# Return statement in fuction
+def greet():
+    return "Hello"
+
+print(greet(),'Gautam')
+print(greet(),'Simi')    
+
+--> Hello Gautam
+    Hello Simi    
+
+ # Abve program with Return Statement
+def greet(lang):
+    if lang == 'es':
+        return 'Hola'
+    elif lang == 'fr':
+        return 'Bonjour'
+    else:
+        return 'Hello'        
+
+>>>print(greet('en'),'Gautam')
+Hello Gautam
+>>>print(greet('es'),'Sally')
+Hola Sally
+>>>print(greet('fr'),'Macron')
+Bonjour Macron
 
 #___________________________________________________#
 #Docstring in Python
@@ -60,19 +124,8 @@ def double(num):
 
 double(5)                    # this will return   10
 print(double.__doc__)      # this will return --> Function to double the value
+help(double)               # to display the documentation as follows
 
-#_____________________________________________________#
-
-#function creation
-def print_lyrics():                                     #function definition
-	print("I'm a lumberjack, and I'm okay.")
-	print('I sleep all night and I work all day.')
-
-#function call
-print_lyrics()    #1st time
-print_lyrics()    #2nd time
-
-print(print_lyrics)       #The value of print_lyrics is a function object, which has type “function”
 
 
 #repeate function which call print_lyrics function 
@@ -104,7 +157,7 @@ print_twice('Spam '*4)
 --> Spam Spam Spam Spam
 
 #_______________________________________________________#
-
+# Multiple Parameter arguments
 #Variables and Parameters Are Local in function
 #return --> to result from a function, we use the return statement in our function
 #When you create a variable inside a function, it is local, which means that it only exists inside the function
@@ -213,7 +266,7 @@ def squared_call(fn, arg):
 print(
     call(mult_by_five, 1),
     squared_call(mult_by_five, 1), 
-    sep='\n', # '\n' is the newline character - it starts a new line 5 25
+    sep='\n',         # '\n' is the newline character - it starts a new line 5 25
 )
 
 #___________________________#
@@ -333,9 +386,8 @@ def person(name,age=18):
 
 person('navin',28)     #here age automatically take 18 no need for age argument(In case we pass it will be override)
 
-#Variable length argument 
-#where no of argument is not fixed
-
+# Variable length argument (where no of argument is not fixed)
+# Variadic parameters allow us to input a variable number of elements.
 
 def sum(a,*b):     #Now first argument is a and another all argument will be in b
     #c= a+b
@@ -344,8 +396,17 @@ def sum(a,*b):     #Now first argument is a and another all argument will be in 
 
 sum(4,7,4,56,7,8,8,67,56,4,5)    #a= 4 and b= (7, 4, 56, 7, 8, 8, 67, 56, 4, 5)
 
+# taking n no of parameter using variadic parameter
 
-#for now adding no to a list of b
+def ArtistNames(*names):
+	for name in names:
+		print(name)
+
+
+ArtistNames("Michal Jacson","AC/DC","Pnk floyd","gautam")
+
+
+#Using for Loop now adding no
 def sum(a,*b):     
     
     c=0
@@ -396,7 +457,7 @@ even,odd = count(list)
 
 print("Even: {} and Odd: {} ".format(even,odd))
         
-#__________________________________________________________________________________________________________#
+#____________________________________________________________________________#
 #harshit vashisht
 #variable scope in function
 
@@ -458,7 +519,7 @@ print(func())     #function call it will print 7 (which is declare inside the fu
 print(x)          #now it will change 5 to 7 and print 7 (beacause function is now called)           
 
 
-#________________________________________________________________________________________________________________#
+#___________________________________#
 # Nonlocal Variables --> Nonlocal variable are used in nested function whose local scope is not defined. This means, the variable can be neither in the local nor 
 #                        the global scope.
 def outer():
@@ -474,6 +535,16 @@ def outer():
 
 outer()
 
+
+#___________________________________________________________________________________________________________________#
+# use enumerate() to adds counter to an iterable and returns it by using function
+
+def printStuff(Stuff):
+	for i,s in enumerate(Stuff):
+		print("Album",i,"Rating is",s)
+
+album_rating=[10.0,8.8,9.6]
+printStuff(album_rating)
 
 
 

@@ -1,7 +1,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! List !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # List(Built-in mutable sequence.) 
 # If no argument is given, the constructor creates a new empty list.
-
+# Tuples are mutable
 
 
 #empty List
@@ -185,8 +185,32 @@ a = [1, 2, 3]
 x, y, z = a  
 print(x) 
 print(y) 
-print(z)  
+print(z)
 
+# We also nest tuples and other data structures in List
+>>> L = ["Michal Jackson",10.1,82,[1,2],('A',1)]
+>>> L
+['Michal Jackson', 10.1, 82, [1, 2], ('A', 1)]
+
+# Replace List Value using index
+>>> A = ["disco",10,1.2]
+>>> A[0] = "Hard rock"
+>>> A
+['Hard rock', 10, 1.2]  
+
+# Convert string to list using split method
+>>>"hard rock".split()
+['hard', 'rock']
+
+>>>"A,B,C,D".split(",")
+['A', 'B', 'C', 'D']
+
+
+# clone list
+>>> A= ["hard rock",1,10.2]
+>>> B = A[:]
+>>> B
+['hard rock', 1, 10.2]
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! List Slicing !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #Lists - slicing (works the same as string slicing, but with list elements instead of string characters)
@@ -296,6 +320,8 @@ print(z)
 'elcycib'
 >>> s[::-2]
 'eccb'
+
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! List Comprehensions !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # Syntex for List Comprehension

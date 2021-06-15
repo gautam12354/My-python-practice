@@ -110,6 +110,12 @@ SyntaxError: invalid syntax
 >>>4%2
 0
 
+# Floor Division --> A floor division divides a number and takes the integer part of the division as the result.
+# For example, five slash slash two is two instead of 2.5. 
+>>> 5//2
+2
+
+
 # ^ is used for exponentiation, but in Python it is a bitwise operator called XOR
 >>> 6 ^ 2
 4

@@ -1,5 +1,10 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   CLASS    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                                         
+# https://www.programiz.com/python-programming/methods/built-in/staticmethod
+
+
+
 #Everthing in python is a object (every object has a type)
+# An object is instance of a perticular class. Like Every time we create an Integer, we are creating an instance of type integer, or we are creating an integer object. 
 #Classes  --> Classes provide a means of bundling data and functionality together.
 #             And, class is a blueprint for the object. we can create many objects from a class
 #Object is simply a collection of data (variables) and methods (functions) that act on those data. 
@@ -27,7 +32,7 @@
 
 #self --> when we call init method by default first argument pass is self. It represent object.
 #         The self argument is a reference to the class itself, and is used to access variables that belongs to the class.
-
+#		  (self as a box that contains all the data attributes of the object.)
 
 #______________________________________#
 #1 Class Creation and Instantiation
@@ -118,7 +123,7 @@ class Employee:
     def __init__(self,first,last,pay):                        #creating parameterized Constructor employee attributes
         print('init method // constructor called')            #*** It will print as much as object is created in this case for times for all employee object 
         self.first = first                                    #Instance variable *** it is not necessary that we write both side first but while calling according to left side value call
-        self.last = last                                      #Instance variable
+        self.last = last                                      #Instance variable(Data Attribute)
         self.pay = pay                                        #Instance variable 
     
     def apply_raise(self):

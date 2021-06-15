@@ -27,6 +27,9 @@ file = open("testfile.txt","w")         #creating a file  with write mode
 >>>file
 <_io.TextIOWrapper name='testfile.txt' mode='r' encoding='cp1252'>
 
+# checking the name of file
+>>>file.name
+
 #checking the mode in which a file has been opened
 >>>file.mode
 'r'

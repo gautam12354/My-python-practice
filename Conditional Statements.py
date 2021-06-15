@@ -110,3 +110,10 @@ for number in range(10):
 
 #_______________________________________________________________________#
     
+#Inline if elese(Ternary operator)/Conditional Operator
+[on_True] if [expression] else [on_False]
+>>>print('a is 20' if a==20 else 'a is not 20')             #Do somthing if condition else do somthing
+>>>print('a is 20' if a==21 else 'a is not 20') 
+>>>b = True if a==20 else False
+>>>print(b)
+True

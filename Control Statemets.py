@@ -2,12 +2,16 @@
 #...it is not a good practice in programming and it is also and manual work which is not good for us.
 #.. so we use use loop for this.
 
-#While lopp 
-#For loop
+#While lopp when --> when you want to repeat an action until a condition changes.
+#For loop  when --> there is sequence of elements that you want too itrate
+
+
+
 
 #__________________________________________________________________________________________________________________#
 										While Loop
 # It works on certain condition and for certain retration
+# A while loop will continuously execute code depending on the value of a condition.
 
 while True:                  #it always true it will print below statement continously 
 	print('Gautam')
@@ -59,7 +63,7 @@ Gautam 3
 Gautam 4
 Gautam 5
 
-#___________________________________________________________#
+#____________________________________________________________________________________________________________________________#
 #Nested While loop  --> In this it is completed firt inner while loop then go to outer while loop
 
 i=1
@@ -161,7 +165,7 @@ Enter an number:
 
 
 #_________________________________________________________________________________________________________________________________#
-											For LooP
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!For LooP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # it works with Sequence like--> list tuple, set array, range function, string
 # it fetechs one by one and itself and without any condition 
 
@@ -237,6 +241,34 @@ for x in range(1,11):
  8  64  512
  9  81  729
 10 100 1000
+
+#____________________________________________________________________________________________________________________________#
+#Nested for loop  --> 
+
+# printing dice combination
+
+for left in range(7):
+	for right in range(left,7):
+		print("[" + str(left) + "]" + "|" + str(right) + "]", end=" ")
+	print()	
+
+[0]|0] [0]|1] [0]|2] [0]|3] [0]|4] [0]|5] [0]|6]
+[1]|1] [1]|2] [1]|3] [1]|4] [1]|5] [1]|6]
+[2]|2] [2]|3] [2]|4] [2]|5] [2]|6]
+[3]|3] [3]|4] [3]|5] [3]|6]
+[4]|4] [4]|5] [4]|6]
+[5]|5] [5]|6]
+[6]|6]
+
+#_______________________________________
+# One vs others
+teams = ['Dragons','Wolves','Pandas','Univorns']
+
+for home_team in teams:
+	for away_team in teams:
+		if home_team != away_team:
+			print(home_team + " Vs" + away_team)
+
 #_______________________________________________________________________________________________________________________________#
 												Break And Continue And Pass
 
@@ -525,9 +557,50 @@ for i in range(num):
     print()
 
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Recursion !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# Recursion Recursion is the repeated application of the same procedure to a smaller problem
+# Recursion let's us tackle complex problems by reducing the problem to a simpler one
+# in programming, recursion is a way of doing a repetitive task by having a function call itself.
+# U can use 1000 times in python
+
+# A recursive function will usually have this structure:
+def recursive_function(parameters):
+    if base_case_condition(parameters):
+        return base_case_value
+    recursive_function(modified_parameters)
 
 
+#_______________________________________
+# factorail using recursion
 
+def factorial(n):
+	if n< 2:               # base case
+		return 1
+	return n* factorial(n-1)  #recursive case(its create loop)
+
+print(factorial(5))			
+
+print(factorial(1000)) # recursionError maximum recursion depth exceed 			
+
+#_______________________________________________________________________
+# The function sum_positive_numbers should return the sum of all positive numbers between the number n received and 1. For example, 
+# when n is 3 it should return 1+2+3=6, and when n is 5 it should return 1+2+3+4+5=15. Fill in the gaps to make this work:
+
+
+def sum_positive_numbers(n):
+    # The base case is n being smaller than 1
+    if n < 1:
+        return n
+
+    # The recursive case is adding this number to 
+    # the sum of the numbers smaller than this one.
+    return n + sum_positive_numbers(n-1)
+
+print(sum_positive_numbers(3)) # Should be 6
+print(sum_positive_numbers(5)) # Should be 15
+
+#__________________________________________________________________________________________________________________________________#
 
 
 

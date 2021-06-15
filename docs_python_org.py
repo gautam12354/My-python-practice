@@ -418,6 +418,14 @@ v = pyautogui.locateOnScreen("E:\\python\\New 11022019\\Click chrome extention\\
 >>>list(enumerate(names))
 [(0, 'Rajesh'), (1, 'Rahul'), (2, 'Aarav'), (3, 'Sahil'), (4, 'Trevor')]
 
+#When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function
+>>> for i, v in enumerate(['tic', 'tac', 'toe']):
+...     print(i, v)
+...
+0 tic
+1 tac
+2 toe
+
 
 #Random numbers
 import random
@@ -559,56 +567,6 @@ a = calc.sub(a,b)
 print(a)
 
 #________________________________________________________________________________________________________________________________#
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Set !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#Python also includes a data type for sets. A set is an unordered collection with no duplicate elements.
-#You can change elements of set unlike tuple.
-#Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
-
->>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
->>> print(basket)                                                        # show that duplicates have been removed
-{'orange', 'banana', 'pear', 'apple'}
-
-# fast membership testing
->>> 'orange' in basket                 
-True
->>> 'crabgrass' in basket
-False
-
-# Demonstrate set operations on unique letters from two words
-
->>> a = set('abracadabra')
->>> b = set('alacazam')
->>> a                                  # unique letters in a
-{'a', 'r', 'b', 'c', 'd'}
->>>b
-{'z', 'c', 'm', 'a', 'l'}
->>> a - b                              # letters in a but not in b
-{'r', 'd', 'b'}
->>> a | b                              # letters in a or b or both
-{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
->>> a & b                              # letters in both a and b
-{'a', 'c'}
->>> a ^ b                              # letters in a or b but not both
-{'r', 'd', 'b', 'm', 'z', 'l'}
-
-#When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function
->>> for i, v in enumerate(['tic', 'tac', 'toe']):
-...     print(i, v)
-...
-0 tic
-1 tac
-2 toe
-
-#Inline if elese(Ternary operator)/Conditional Operator
-[on_True] if [expression] else [on_False]
->>>print('a is 20' if a==20 else 'a is not 20')             #Do somthing if condition else do somthing
->>>print('a is 20' if a==21 else 'a is not 20')	
->>>b = True if a==20 else False
->>>print(b)
-True
-
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # isinstance() -->The isinstance() function checks if the object (first argument) is an instance or subclass of classinfo 
                  #class (second argument).
 
@@ -699,7 +657,7 @@ print(sum)
 
 
 #________________________________________________________________________________________________________________________#
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! convert one sequence to another !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! convert one sequence to another Sequence !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 >>> set([1,2,3])
 {1, 2, 3}

@@ -4,9 +4,10 @@
 '''
 * You cannot have duplicate keys in a dictionary values may be. Altering the value of an existing key will delete the old value.
 * You can add new key-value pairs at any time.
-* Dictionaries have no concept of order among elements its unodered. They are simple unordered collections.Stored data lke Map.
-* it is mutable
-* it is index as well in form of kay
+* Dictionaries have no concept of order among elements its unodered. They are simple unordered collections.Stored data like Map.
+* it is mutable.
+* it is index as well in form of keys
+
 '''
 
 
@@ -115,4 +116,9 @@ student = {'name': 'John', 'age': 25, 'courses': ['Math', 'CompSci']}
 for key, value in student.items():
     print(key, value)
 
+
+# Dictionay also contains list tuples in vales
+>>>Dict={"A":1,"B":"2","C":[3,3,3],"D":(4,4,4),'E':5,'F':6}
+>>> Dict["D"]
+(4, 4, 4)
 
