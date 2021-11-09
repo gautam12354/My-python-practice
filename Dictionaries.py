@@ -109,12 +109,24 @@ dict_items([('Vendor', 'Cisco'), ('Model', '2600'), ('IOS', '12.4'), ('Ports', '
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Iterating over the Contents of a Dictionary
 
-#Using Loop to access key value using items() 
+#Using For Loop to access key value using items() 
 student = {'name': 'John', 'age': 25, 'courses': ['Math', 'CompSci']}
 
+# Key value pair
 for key, value in student.items():
     print(key, value)
+
+# Acess Keys
+for key in student.keys():
+    print(key)
+
+# Acess Values
+for value in student.values():
+    print(value)
+
+
 
 
 # Dictionay also contains list tuples in vales

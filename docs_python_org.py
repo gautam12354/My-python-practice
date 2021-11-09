@@ -1,3 +1,7 @@
+# check python debugging stages online step by step
+# https://www.onlinegdb.com/online_python_debugger
+
+
 
 # https://developers.google.com/machine-learning/guides/text-classification
 #https://hackernoon.com/tagged/python          --> Best
@@ -150,65 +154,6 @@ ame
 # Search for a character inside a list 
 print(any("a" in word for word in ["apple", "absolutely", "application"]))
 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Format !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#Format method --> to replace string in 
-
-# .format can be used to format strings, like this:
-"{} can be {}".format("Strings", "interpolated")             # => "Strings can be interpolated"
--->'Strings can be interpolated'
-
-# You can use keywords if you don't want to count.
-"{name} wants to eat {food}".format(name="Bob", food="lasagna")  
--->"Bob wants to eat lasagna"
-
-#The String format() Method
->>> print('We are the {} who say "{}!"'.format('knights', 'Ni'))    
-We are the knights who say "Ni!"
-
-# on specific position
->>> print('{0} and {1}'.format('spam', 'eggs'))
-spam and eggs
->>> print('{1} and {0}'.format('spam', 'eggs'))
-eggs and spam
-
-#no need to convert in string for a number
->>>version =3
->>>print('I love python {}.'.format(version))
-I love python 3.
-
-#formate Specification
-#Formating String Alignment
-< Left  --> if not specify then it is considered
-^ Center
-> Right
->>>print('{0:8} | {1:<8}'.format('fruit','Quantity'))    #first formate range for first element second for second 
-fruit    | Quantity
->>>print('{0:8} | {1:<8}'.format('Apple','3'))           #
-Apple    | 3
->>>print('{0:8} | {1:<8}'.format('Orange','10'))
-Orange   | 10
-
-
-#Formating String - Data Types
-f      Flotes
-.Nf    N= The number of decimal Places
-
->>>print('{0:8} | {1:<8.2f}'.format('Orange',2.3333333))
-Orange   | 2.33
-
-
-#getting user Input
->>>fruit = input('Enter a name of fruit: ')
->>>print('{} is a lovely fruit.'.format(fruit))
-apple is a lovely fruit.
-
-
-# Strings - formatting v3 (f-strings) 
->>>model = "2950M" 
->>>wan = 4 
->>>ios = "12.2" 
->>>f"Cisco model: {model}, {wan} WAN slots, IOS {ios}"
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -410,8 +355,11 @@ v = pyautogui.locateOnScreen("E:\\python\\New 11022019\\Click chrome extention\\
 >>>x, y = y, x 
 >>>print(x, y)
 
-#Enumerate
-#The enumerate () method adds a counter to an iterable and returns the enumerate object.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Enumerate !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Enumerate - if you want to access the elements in a list, along with the index of the element.
+# The enumerate() function takes a list as a parameter and returns a tuple for each element in the list. The first value of the tuple is the index and the second value is the element itself.
+
+
 >>>names = ['Rajesh', 'Rahul', 'Aarav', 'Sahil', 'Trevor']
 >>>enumerate(names)
 <enumerate object at 0x031D9F80>
@@ -425,6 +373,9 @@ v = pyautogui.locateOnScreen("E:\\python\\New 11022019\\Click chrome extention\\
 0 tic
 1 tac
 2 toe
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 
 #Random numbers

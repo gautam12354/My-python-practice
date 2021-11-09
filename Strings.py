@@ -151,6 +151,9 @@ True
 >>> 'seed' in 'banana'
 False
 
+>>>"12345".isnumeric()
+True
+
 # Strings --> checking if a character is not part of a string
 >>>a = "Cisco"
 >>>"b" not in a
@@ -220,6 +223,24 @@ thwas was string example....wow!!! thwas is really string
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! String Slicing !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # Strings - slicing 
+
+
+>>> fruit = "Mangosteen"
+
+# The slice includes the character at index 1, and excludes the character at index 4
+>>> fruit[:5]
+'Mango'
+
+# the characters from the start of the string through index 4, excluding index 5.
+>>> fruit[5:]
+'steen'
+
+# After Combining
+>>> fruit[:5] + fruit[5:]
+'Mangosteen'
+
+#___________________________
+# lets Practice with new String
 
 >>>string1 = "O E2 10.110.8.9 [160/5] via 10.119.254.6, 0:01:00, Ethernet2" 
 
@@ -354,3 +375,70 @@ Michal Jackson
 # Taking tab
 >>> print("Michal Jackson \t is the best")
 Michal Jackson   is the best 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Format STRING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#Format method --> to replace string in 
+
+# .format can be used to format strings, like this:
+"{} can be {}".format("Strings", "interpolated")             # => "Strings can be interpolated"
+-->'Strings can be interpolated'
+
+# You can use keywords if you don't want to count.
+"{name} wants to eat {food}".format(name="Bob", food="lasagna")  
+-->"Bob wants to eat lasagna"
+
+#The String format() Method
+>>> print('We are the {} who say "{}!"'.format('knights', 'Ni'))    
+We are the knights who say "Ni!"
+
+# on specific position
+>>> print('{0} and {1}'.format('spam', 'eggs'))
+spam and eggs
+>>> print('{1} and {0}'.format('spam', 'eggs'))
+eggs and spam
+
+#no need to convert in string for a number
+>>>version =3
+>>>print('I love python {}.'.format(version))
+I love python 3.
+
+#formate Specification
+#Formating String Alignment
+< Left  --> if not specify then it is considered
+^ Center
+> Right
+
+>>>print('{0:8} | {1:<8}'.format('fruit','Quantity'))    #first formate range for first element second for second 
+fruit    | Quantity
+
+# would align the text eight spaces to the left
+>>>print('{0:8} | {1:<8}'.format('Apple','3'))           #
+Apple    | 3
+
+# would align the text eight spaces to the right
+>>>print('{0:8} | {1:>8}'.format('Orange','10'))
+Orange   |       10
+
+
+#Formating String - Data Types
+f      Flotes
+.Nf    N= The number of decimal Places
+
+# use 2f to show only two decimal in no
+>>>print('{0:8} | {1:<8.2f}'.format('Orange',2.3333333))
+Orange   | 2.33
+
+
+#getting user Input
+>>>fruit = input('Enter a name of fruit: ')
+>>>print('{} is a lovely fruit.'.format(fruit))
+apple is a lovely fruit.
+
+
+# Strings - formatting v3 (f-strings) 
+>>>model = "2950M" 
+>>>wan = 4 
+>>>ios = "12.2" 
+>>>f"Cisco model: {model}, {wan} WAN slots, IOS {ios}"
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

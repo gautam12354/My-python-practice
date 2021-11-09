@@ -1,7 +1,11 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   CLASS    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                                         
 # https://www.programiz.com/python-programming/methods/built-in/staticmethod
+# https://docs.microsoft.com/en-us/learn/modules/python-object-oriented-programming/2-what-is-oop
+# https://www.datacamp.com/community/tutorials/python-oop-tutorial
 
 
+# Object-oriented programming (OOP) is a programming paradigm. 
+# It's based on the idea of grouping related data and functions into "islands" of information. These islands are known as objects.
 
 #Everthing in python is a object (every object has a type)
 # An object is instance of a perticular class. Like Every time we create an Integer, we are creating an instance of type integer, or we are creating an integer object. 

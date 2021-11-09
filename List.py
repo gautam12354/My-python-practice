@@ -82,8 +82,8 @@
 >>>list1
 ['Cisco', 'Juniper', 'Nortel', 10, 10.5, -11]
 
-
-# #sorts the elements of a list in descending order and creates a new list at the same time
+# sorted returns a new list, while sort returns the same list reorganized.
+# sorted -->sort the elements of a list in descending order and creates a new list at the same time
 >>>list2 = [9, 99, 999, 1, 25, 500]
 >>>sorted(list2, reverse = True)
 [999, 500, 99, 25, 9, 1]
@@ -501,5 +501,21 @@ y = [a + 2 for a in x]
 print(y)
 
 [4, 5, 6, 7, 8] # result of ablove code
+
+
+#__________________________________________________________________
+
+# saort the list based on their lengh
+name = ['carlos','Ray', 'james','gone']
+print(sorted(name, key = len))
+
+
+
+
+
+
+
+
+
 
 
